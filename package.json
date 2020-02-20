@@ -1,0 +1,45 @@
+{
+  "name": "ts-cron-reflect",
+  "version": "1.0.0",
+  "description": "TS cron service",
+  "main": "build/runner.js",
+  "scripts": {
+    "start": "node build/runner.js",
+    "build": "tsc",
+    "postinstall": "npm run build",
+    "dev": "clear & NODE_ENV='development' ./node_modules/.bin/ts-node-dev -O '{ \"noUnusedLocals\":false, \"noUnusedParameters\":false }' --inspect --respawn --no-notify -- src/runner.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyskomv/ts-cron-reflect.git"
+  },
+  "keywords": [
+    "TS",
+    "cron",
+    "reflect",
+    "decorator"
+  ],
+  "author": "Hysko MV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyskomv/ts-cron-reflect/issues"
+  },
+  "homepage": "https://github.com/hyskomv/ts-cron-reflect#readme",
+  "devDependencies": {
+    "@types/cron": "^1.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "1.19.1",
+    "ts-node": "^8.6.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "cron": "^1.8.2",
+    "reflect-metadata": "^0.1.13"
+  }
+}

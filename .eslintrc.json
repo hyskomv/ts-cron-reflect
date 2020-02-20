@@ -1,0 +1,40 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    // Default settings
+    "semi": "off",
+    "max-len": [ "error", 120 ],
+    "quotes": [ "error", "single" ],
+    "comma-dangle": ["error", "always-multiline"],
+
+    // Possible Errors
+    "@typescript-eslint/ban-ts-ignore": [ "warn" ],
+    "@typescript-eslint/no-unused-vars": [ "warn", { "argsIgnorePattern": "^_" } ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": [ "error" ],
+    "@typescript-eslint/interface-name-prefix": [ "warn" ],
+    "@typescript-eslint/semi": ["error"],
+    //    "@typescript-eslint/no-non-null-assertion": "off",
+
+    // Best Practices
+    "no-console": [ "warn" ]
+  }
+}
